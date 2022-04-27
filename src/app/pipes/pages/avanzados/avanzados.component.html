@@ -1,1 +1,49 @@
-<p>avanzados works!</p>
+<h3>Pipes Avanzados</h3>
+<hr>
+
+
+<div class="row">
+
+    <div class="col-md-6">
+
+        <div class="card">
+            <div class="card-body">
+               <h5 class="card-title">Slice Pipe</h5>
+               <p class="card-text">{{ alumnos }}</p>
+               <pre>{{ alumnos | slice: 2:4 }}</pre>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+
+        <div class="card">
+            <div class="card-body">
+               <h5 class="card-title">Json Pipe</h5>
+               <p class="card-text">{{ coche }}</p>
+               <pre>{{ coche | json }}</pre>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="col-md-6">
+
+        <div class="card">
+            <div class="card-body">
+               <h5 class="card-title">I18nPluranPip</h5>
+               <p class="card-text">{{ alumnos.length | i18nPlural: alumnosMap}}  en este centro</p>
+                <button class="btn btn-primary" (click)="borrarAlumno()">
+                    Borrar Alumno
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</div>

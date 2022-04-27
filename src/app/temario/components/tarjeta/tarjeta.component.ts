@@ -22,6 +22,4 @@ export class TarjetaComponent implements OnInit {
     this.meGustaEmiter.emit(1);
   }
 
-
-
 }

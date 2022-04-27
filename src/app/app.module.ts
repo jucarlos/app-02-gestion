@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 // fichero de rutas principales
@@ -16,12 +16,18 @@ import { TemarioModule } from './temario/temario.module';
 import { PipesModule } from './pipes/pipes.module';
 import { PaisesModule } from './paises/paises.module';
 
+// Cambiar el idioma/locale de la app a Español
+import localeES from '@angular/common/locales/es';
+import { registerLocaleData  } from '@angular/common';
+
+
+registerLocaleData(localeES);
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,9 @@ import { PaisesModule } from './paises/paises.module';
     PipesModule,
     PaisesModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'es' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,1 +1,81 @@
-<p>basicos works!</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Pipe</th>
+            <th>Valor</th>
+            <th>Resultado</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>uppercase</td>
+            <td>{{ nombre }}</td>
+            <td>{{ nombre | uppercase }}</td>
+        </tr>
+
+        <tr>
+            <td>lowercase</td>
+            <td>{{ nombre }}</td>
+            <td>{{ nombre | lowercase }}</td>
+        </tr>
+
+        <tr>
+            <td>titlecase</td>
+            <td>{{ nombre }}</td>
+            <td>{{ nombre | titlecase }}</td>
+        </tr>
+
+        <tr>
+            <td>number</td>
+            <td>{{ precio  }}</td>
+            <td>{{ precio | number }}</td>
+        </tr>
+
+
+        <tr>
+            <td>number</td>
+            <td>{{ precio  }}</td>
+            <td>{{ precio | number: '.1-2' }}</td>
+        </tr>
+
+        <tr>
+            <td>number</td>
+            <td>{{ precio  }}</td>
+            <td>{{ precio | number: '.2-2' }}</td>
+        </tr>
+
+        <tr>
+            <td>Currency</td>
+            <td>{{ precio  }}</td>
+            <td>{{ precio | currency:'EUR' }}</td>
+        </tr>
+
+        <tr>
+            <td>DatePipe</td>
+            <td>{{ fecha  }}</td>
+            <td>{{ fecha | date }}</td>
+        </tr>
+
+        <tr>
+            <td>DatePipe</td>
+            <td>{{ fecha  }}</td>
+            <td>{{ fecha | date: 'fullDate' }}</td>
+        </tr>
+
+        <tr>
+            <td>Alrevés</td>
+            <td>{{ nombre  }}</td>
+            <td>{{ nombre | alreves }}</td>
+        </tr>
+
+
+
+
+
+    </tbody>
+
+</table>
