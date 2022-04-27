@@ -1,0 +1,17 @@
+
+<div class="card">
+    <img *ngIf="mostrarImg"
+      src="../../../../assets/img/Angular_full_color_logo.svg.png" 
+         class="w150" alt="Imagen de angular">
+    <div class="card-body">
+      <h5 class="card-title">{{ miTema.titulo }}</h5>
+      <p class="card-text">{{ miTema.contenido }}</p>
+      <p class="text-primary">{{ miTema.meGusta}} Me gusta</p>
+      
+      <i (click)="meGusta()"
+        style="font-size: 2rem; color: cornflowerblue"
+         class="bi bi-hand-thumbs-up"></i>
+
+      <!-- <i class="bi bi-hand-thumbs-up-fill"></i> -->
+    </div>
+  </div>

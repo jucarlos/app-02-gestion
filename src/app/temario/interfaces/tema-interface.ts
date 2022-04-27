@@ -5,4 +5,12 @@ export interface Tema {
     contenido: string;
     meGusta: number;
     noMeGusta?: number;
+
+
+}
+
+
+export  interface Vehiculo {
+    marca: string;
+    kilometraje: number;
 }
