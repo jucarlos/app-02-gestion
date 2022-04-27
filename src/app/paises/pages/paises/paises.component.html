@@ -1,1 +1,26 @@
-<p>paises works!</p>
+
+
+<h3>Listado de paises</h3>
+<hr>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th> # </th>
+            <th> Bandera </th>
+            <th> Nombre </th>
+            <th> Población </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let pais of paises">
+            <td> 1 </td>
+            <td> bandera </td>
+            <td> {{ pais.name }} </td>
+            <td> 545454 </td>
+            <td> ver </td>
+        </tr>
+    </tbody>
+</table>

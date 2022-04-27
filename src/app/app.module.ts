@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 // fichero de rutas principales
 import { AppRoutingModule } from './app-routing.module';
 
+// Http
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 
 // Resto de componentes
@@ -32,6 +35,7 @@ registerLocaleData(localeES);
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     ClientesModule,
     TemarioModule,
     PipesModule,
