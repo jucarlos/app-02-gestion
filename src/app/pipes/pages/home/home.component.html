@@ -1,28 +1,35 @@
-<h1>Pipes</h1>
-<hr>
+<div class="animate__animated animate__fadeIn">
 
-<div class="row">
 
-    <div class="col-md-4">
-
-        <ul class="list-group">
-            <li routerLinkActive="active"
-                routerLink="basicos"
-                class="list-group-item">Básicos</li>
-                
-            <li routerLinkActive="active"
-                routerLink="avanzados"
-                class="list-group-item">Avanzados</li>
-        </ul>
-        
-
+    <h1>Pipes</h1>
+    <hr>
+    
+    <div class="row">
+    
+        <div class="col-md-4">
+    
+            <ul class="list-group">
+                <li routerLinkActive="active"
+                    routerLink="basicos"
+                    class="list-group-item">Básicos</li>
+                    
+                <li routerLinkActive="active"
+                    routerLink="avanzados"
+                    class="list-group-item">Avanzados</li>
+            </ul>
+            
+    
+        </div>
+    
+        <div class="col">
+    
+            <router-outlet></router-outlet>
+    
+        </div>
+    
+    
     </div>
-
-    <div class="col">
-
-        <router-outlet></router-outlet>
-
-    </div>
-
 
 </div>
+
+
