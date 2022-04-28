@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PaisDetalleComponent } from './pages/pais-detalle/pais-detalle.component';
 import { PaisesComponent } from './pages/paises/paises.component';
 
 const routes: Routes = [
@@ -9,6 +10,10 @@ const routes: Routes = [
       {
         path: 'listado',
         component: PaisesComponent
+      },
+      {
+        path: 'verpais/:id',
+        component: PaisDetalleComponent,
       },
       {
         path: '**',

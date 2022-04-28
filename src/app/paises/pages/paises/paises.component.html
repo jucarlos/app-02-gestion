@@ -3,7 +3,15 @@
 <h3>Listado de paises</h3>
 <hr>
 
-<table class="table table-hover">
+
+<div *ngIf="paises.length === 0"
+    class="spinner-border text-warning" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+
+<table  *ngIf="paises.length > 0"
+class="table table-hover">
     <thead>
         <tr>
             <th> # </th>
@@ -15,12 +23,17 @@
     </thead>
 
     <tbody>
-        <tr *ngFor="let pais of paises">
-            <td> 1 </td>
-            <td> bandera </td>
+        <tr *ngFor="let pais of paises; let i = index">
+            <td> {{ i + 1 }} </td>
+            <td> 
+                <img class="small-flag"
+                    [src]="pais.flags.svg">
+             </td>
             <td> {{ pais.name }} </td>
-            <td> 545454 </td>
-            <td> ver </td>
+            <td> {{ pais.population | number }} </td>
+            <td> 
+                <a [routerLink]="['/paises/verpais', pais.alpha2Code] " > Ver </a>
+            </td>
         </tr>
     </tbody>
 </table>

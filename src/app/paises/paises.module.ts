@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { PaisesRoutingModule } from './paises-routing.module';
 import { PaisesComponent } from './pages/paises/paises.component';
+import { PaisDetalleComponent } from './pages/pais-detalle/pais-detalle.component';
 
 
 @NgModule({
   declarations: [
-    PaisesComponent
+    PaisesComponent,
+    PaisDetalleComponent
   ],
   imports: [
     CommonModule,

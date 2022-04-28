@@ -14,11 +14,15 @@ export class PaisesComponent implements OnInit {
   constructor(private paisesService: PaisesService) { }
 
   ngOnInit(): void {
+
     this.obtenerPaises();
+
+    console.log('Estamos obtenienbdo paises')
   }
 
   obtenerPaises() {
-    this.paisesService.getPaises().subscribe( respPaises => {
+    this.paisesService.getPaises()
+    .subscribe( respPaises => {
       console.log( respPaises[3].capital );
       this.paises = respPaises;
     })
